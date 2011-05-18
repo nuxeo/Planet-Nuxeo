@@ -1,0 +1,43 @@
+{% macro spotlighted(post) %}
+<div class="spotlighted">
+  <div class="date">
+    {{ post.published_datetime.strftime("%a %d %B %Y") }}
+  </div>
+
+  <div class="fromblog">
+    <a href="{{ post.feed.url }}" class="whosblog">{{ post.feed.title }}</a>
+  </div>
+
+  {% set image_url = post.image_url %}
+  {% if image_url %}
+  <div class="thumbnail">
+    <img src="{{ image_url }}" width="150"/>
+  </div>
+  {% endif %}
+
+  <div class="title">
+    <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+  </div>
+
+
+  <div class="summary">
+    {{ post.summary(400) }}
+  </div>
+
+  <div class="read-more"><a href="{{ post.link }}">Continue reading &raquo;</a></div>
+  <div style="clear:both;"></div>
+</div>
+{%- endmacro %}
+
+{% macro posts_list(posts) %}
+<div class="posts-list">
+  <h4>Other recent posts</h4>
+  <ul>
+    {% for post in posts %}
+    <li><span>{{ post.published_datetime.strftime("%a %d %B %Y") }}:</span>
+      <a href="postlinkg">{{ post.title }}</a> from
+      <a href="{{ post.feed.url }}" class="whosblog">{{ post.feed.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{%- endmacro %}

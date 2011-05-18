@@ -1,0 +1,236 @@
+/* May 2011 New homepage for the Nuxeo Blogs, Ring tool */
+
+#container-inner {
+  margin-top: 1em;
+}
+
+#banner-header {
+  padding-bottom: 28px;
+  padding-left: 0;
+}
+
+h1#banner-header {
+  font-size: 21px;
+}
+
+h2, h3 {
+  background-color: #ffde00 ;
+  display: inline-block;
+  padding:0.25em 0.75em;
+  margin-left: -30px;
+}
+
+h2.module-header {
+  background-color: transparent;
+  padding:0;
+  margin-left: 0;
+}
+
+h3 {
+  margin-top:1em;
+}
+
+h4 {
+  font-weight:bold;
+}
+
+
+/* .layout-three-column-right #alpha {
+  padding:0;
+}
+
+#alpha-inner, #beta-inner, #gamma-inner, #delta-inner {
+  padding:0;
+}
+
+#alpha, #beta, #gamma, #delta {
+    margin:0;
+} */
+
+#first {
+  margin-top:-40px;
+  margin-bottom: 2em;
+
+}
+
+.spotlight {
+  margin-bottom: 1em;
+}
+
+.date {
+  color:#999;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 1em;
+}
+
+.fromblog {
+}
+
+.spotlighted {
+  border-bottom: 1px solid #e7e7e7;
+    font-size: 14px;
+
+}
+
+.spotlighted h3 {
+  background-color: transparent;
+  padding:0;
+  padding-left: 20px;
+  margin-left: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.spotlighted h3 a, .spotlighted h3 a:visited, .spotlighted h3 a:hover {
+ color:black;
+ }
+
+.thumbnail {
+  float:right;
+  margin:0 0 1em 1em;
+}
+
+.summary {
+  padding-left: 20px;
+}
+
+.posts-list h4 {
+  margin-top:1.5em;
+}
+
+.posts-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.posts-list ul li {
+  list-style: none none inside;
+  padding: 0.5em 0;
+  margin-left: 20px;
+  border-bottom:1px solid #e7e7e7;
+}
+
+.posts-list ul li span {
+/*  font-weight: bold; */
+  color:#999;
+}
+
+.whosblog {
+  padding-left: 20px;
+  background: transparent url(../img/user-silhouette.png) top left no-repeat;
+}
+
+.read-more {
+  text-align: right;
+  margin: 0.35em 0; 
+}
+
+.google-dfp {
+    background-color: #F2FAFD;
+    border-left: 7px solid #BDE4F5;
+    color: #000000;
+    font-size: 12px;
+    line-height: 150%;
+    margin: 2em 0;
+    padding: 5px 5px 5px 15px;
+    width: 656px;
+    margin-left: -30px;
+}
+
+#downloads, #community {
+ width:300px;
+}
+
+#downloads {
+ float:right;
+}
+
+#community {
+  float:left;
+}
+
+#downloads h3, #community h3 {
+
+}
+
+#downloads ul, #community ul {
+  list-style: none outside none;
+  padding-left: 0;
+}
+
+#downloads li, #community li {
+  padding:0.35em 0;
+}
+
+#downloads div, #community div {
+}
+
+#downloads ul li {
+  background: url("../img/bullet_disk.png") 0 3px no-repeat;
+  padding-left: 20px
+}
+
+#downloads ul.or li {
+  background: url("../img/bullet_go.png") 0 3px no-repeat;
+  margin-top: 10px
+}
+
+#community ul li {
+  background: url("../img/bullet.png") 0 3px no-repeat;
+  padding-left:20px
+}
+
+/*
+#downloads li a {
+  color: #000;
+  font-family: Verdana;
+  font-weight: bold
+}
+*/
+
+#downloads .dm {
+  color: #3389e5
+}
+
+#downloads .dam {
+  color: #00a992
+}
+
+#downloads .cmf {
+  color: #97bf0d
+}
+
+/* Column */
+
+#allblogs {
+  margin-bottom: 1.5em;
+}
+
+#allblogs h3 {
+  background-color: #b0d6ff;
+ }
+ 
+#allblogs ul {
+  list-style: none outside none;
+  padding:0;
+  margin: 0;
+} 
+
+#allblogs li {
+  padding: 0.5em;
+  margin:0 1px;
+  margin-bottom: 0.75em;
+  border:1px solid #999;
+  background-color: #fff;
+  } 
+
+#allblogs li a {
+  padding-left:25px;
+  background: transparent url(../img/user-silhouette.png) 3px top no-repeat;
+  font-weight: bold;
+}  
+  
+#allblogs span {
+  display: block;
+  padding-left: 25px;
+}  

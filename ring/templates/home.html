@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+{% import 'macros.html' as macros %}
+
+<html>
+
+<head>
+  <title>Nuxeo Blogs</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="http://blogs.nuxeo.com/ebarroca/styles.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="http://www.nuxeo.com/var/storage/community/community_common.css" type="text/css"
+          media="screen"/>
+  <link rel="stylesheet" href="/media/style/blogs.css" type="text/css" media="screen"/>
+  <link rel="alternate" href="http://blogs.nuxeo.com/atom.xml" title="" type="application/atom+xml">
+
+  <!-- tweet -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+  <!-- misc tweaks -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // Fix too large images.
+      $("img").each(function(i) {
+        if (this.width > 200) this.width = 200;
+      });
+    });
+  </script>
+
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(["_setAccount", "UA-81135-9"]);
+    _gaq.push(["_setAllowLinker", true]);
+    _gaq.push(["_setDomainName", ".nuxeo.com"]);
+    _gaq.push(["_setAllowLinker", true]);
+    _gaq.push(["_setAllowHash", false]);
+    _gaq.push(["_trackPageview"]);
+
+    (function() {
+      var ga = document.createElement("script");
+      ga.type = "text/javascript";
+      ga.async = true;
+      ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <script src='http://partner.googleadservices.com/gampad/google_service.js'></script>
+  <script>
+    GS_googleAddAdSenseService("ca-pub-1284681875767465");
+    GS_googleEnableAllServices();
+  </script>
+  <script>
+    GA_googleAddSlot("ca-pub-1284681875767465", "blogs-home-bottom");
+  </script>
+  <script>
+    GA_googleFetchAds();
+  </script>
+
+</head>
+
+<body class="layout-three-column-right">
+
+<div class="header">
+  <div class="logoHome">
+    <a rel="home" title="Home" href="http://blogs.nuxeo.com/"><img height="36" width="88" alt="Nuxeo"
+       src="http://www.nuxeo.com/var/storage/community/nuxeo_logo.png"></a>
+  </div>
+
+  <div class="externalLinks">
+    <ul>
+      <li><a href="http://community.nuxeo.com/">Home</a></li>
+      <li><a href="http://forum.nuxeo.com/">Forums</a></li>
+      <li><a href="http://doc.nuxeo.com/">Documentation</a></li>
+      <li class="active"><a href="http://blogs.nuxeo.com/">Blogs</a></li>
+    </ul>
+    <ul class="corp">
+      <li><a href="http://nuxeo.com/">Nuxeo.com</a></li>
+    </ul>
+  </div>
+</div>
+<div style="clear:both;"></div>
+
+<div id="container">
+<div id="container-inner" class="pkg">
+
+<!-- banner -->
+<div id="banner">
+  <div id="banner-inner" class="pkg">
+    <h1 id="banner-header"><a href="http://blogs.nuxeo.com/" accesskey="1">Nuxeo Blogs</a></h1>
+  </div>
+</div>
+<!-- /banner -->
+
+<div id="pagebody">
+<div id="pagebody-inner" class="pkg">
+
+<div id="alpha">
+  <div id="alpha-inner" class="pkg">
+    <!-- content of blogs starts here -->
+
+    <div class="spotlight" id="first">
+      <h2>Spotlight</h2>
+      {{ macros.spotlighted(featured[0]) }}
+      {{ macros.posts_list(featured[1:]) }}
+    </div>
+
+    <div class="spotlight">
+      <h2>News from the dev team</h2>
+      {{ macros.spotlighted(dev[0]) }}
+      {{ macros.posts_list(dev[1:]) }}
+    </div>
+
+    <div class="google-dfp">
+
+      <!-- blogs-home-bottom -->
+      <script type='text/javascript'>
+        GA_googleFillSlot("blogs-home-bottom");
+      </script>
+
+    </div>
+
+    <div id="downloads">
+      <h3>Download Nuxeo Software</h3>
+
+      <div class="list">
+        <ul>
+          <li>
+            <b>nuxeo <span class="dm"> • </span> DM</b> -
+            <a onclick="_gaq.push(['_trackEvent', 'Download', 'DM', 'Go to DM download'])"
+                    href="http://www.nuxeo.com/en/downloads/download-dm-form">Document
+              Management</a>
+          </li>
+          <li>
+            <b>nuxeo <span class="dam"> • </span> DAM</b> -
+            <a onclick="_gaq.push(['_trackEvent', 'Download', 'DAM', 'Go to DAM download'])"
+                    href="http://www.nuxeo.com/en/downloads/download-dam-form">Digital Asset
+              Management</a>
+          </li>
+          <li>
+            <b>nuxeo <span class="cmf"> • </span> CMF</b> -
+            <a onclick="_gaq.push(['_trackEvent', 'Download', 'CMF', 'Go to CMF download'])"
+                    href="http://www.nuxeo.com/en/downloads/download-cmf-form">Case
+              Management</a> Framework
+          </li>
+        </ul>
+        <ul class="or">
+          <li>
+            Learn how to <a onclick="_gaq.push(['_trackEvent', 'Download', 'Debian', 'Go to Debian download doc'])"
+                  href="https://doc.nuxeo.com/display/KB/Configuring+Nuxeo+Debian+or+Ubuntu+repositories">install Nuxeo
+            DM on Debian/Ubuntu</a>,
+            or how to build the platform <a
+                  onclick="_gaq.push(['_trackEvent', 'Download', 'From scratch', 'Learn how to build from source'])"
+                  href="https://doc.nuxeo.com/display/KB/Working+with+Nuxeo+EP+source+code">from the sources</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="community">
+      <h3>Get Involved</h3>
+
+      <div class="list">
+        <ul>
+          <li>
+            Join the <a href="http://lists.nuxeo.com/mailman/listinfo/ecm">Nuxeo users</a> mailing list or the <a
+                  href="http://forum.nuxeo.org/">Forum</a>
+          </li>
+          <li>
+            Look at the outstanding issues and tasks in the <a href="http://jira.nuxeo.org/">Jira issue tracker</a> and
+            contribute to the <a
+                  href="https://jira.nuxeo.org/browse/NXP?report=com.atlassian.jira.plugin.system.project:roadmap-panel">roadmap</a>
+          </li>
+          <li>
+            Check out the <a href="https://doc.nuxeo.com/display/CORG/Getting+the+Nuxeo+source+code">Source
+            Code</a>
+          </li>
+          <li>
+            Learn <a href="https://doc.nuxeo.com/display/NXDOC/Nuxeo+contributors+welcome+page">how to become a
+            Nuxeo contributor</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div style="clear:both;"></div>
+
+
+    <!-- content of blogs ends here -->
+
+  </div>
+  <!--/alpha-inner-->
+</div>
+<!--/alpha-->
+
+<!-- =============================================================== -->
+
+<div id="beta">
+  <div id="beta-inner">
+
+    <h2 class="module-header">Share this</h2>
+
+    <div class="module-content">
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style">
+        <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=nuxeo" class="addthis_button_compact">Share</a>
+        <span class="addthis_separator">|</span>
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_myspace"></a>
+        <a class="addthis_button_google"></a>
+        <a class="addthis_button_twitter"></a>
+      </div>
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=nuxeo"></script>
+      <!-- AddThis Button END -->
+    </div>
+
+    <h2 class="module-header">Don't miss a thing!</h2>
+
+    <div class="module-content">
+      <p class="nuxeo-subscribe-module">
+        <a href="atom.xml"><img src="http://nuxeo.typepad.com/img/feed.png"/>Subscribe to Feed</a>
+      </p>
+
+      <p class="nuxeo-subscribe-module">
+        <a href="http://twitter.com/nuxeo/"><img src="http://nuxeo.typepad.com/img/twitter.png"/>Follow us on
+          Twitter</a>
+      </p>
+
+      <!-- TODO
+      <form onsubmit="window.open('http://www.feedburner.com/fb/a/emailverifySubmit?feedId=120967', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" target="popupwindow" method="post" action="http://www.feedburner.com/fb/a/emailverify" style=""><p>Subscribe by email:</p>
+      <p><input type="text" name="email" class="emailSub" /><input type="hidden" name="url" value="http://feeds.feedburner.com/~e?ffid=120967"/><input type="hidden" name="title" value="Eric Barroca's Blog"/><input type="hidden" value="en_US" name="loc"/><input type="submit" value="OK" style="margin-left:5px;"/></p></form>
+
+      <a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://blogs.nuxeo.com/">Add to Technorati Favorites</a>
+
+      -->
+
+    </div>
+    <!--/module-content-->
+
+    <div id="allblogs">
+      <h3>All the blogs</h3>
+
+      <ul>
+        {% for feed in feeds %}
+        <li>
+          <a href="{{ feed.url}}">{{ feed.title }}</a>
+          <span>{{ feed.description }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+    <script type="text/javascript" src="http://api.postrank.com/static/widget-v2.js"></script>
+    <script type="text/javascript">
+      var options = {
+        "feed_hash": "dc78a721ffc4e5e8a81c691c66f9bdf5",
+        "num":        5 ,
+        "theme":     "blueSteel"
+      };
+      new PostRankWidget(options);
+    </script>
+
+
+  </div>
+  <!--/beta-inner-->
+</div>
+<!--/beta-->
+
+<!-- =============================================================== -->
+
+<div id="gamma">
+  <div class="pkg" id="gamma-inner">
+    <!-- sidebar2 -->
+
+    <h2 class="module-header">About Us</h2>
+
+    <div id="about">
+      <p>
+        We're the friendly employees of Nuxeo, a leading <b>open source
+        software vendor</b>, which develops a complete <b><a href="http://www.nuxeo.com/en/products/ep">Enterprise
+        Content
+        Management</a> (ECM)</b> software platform and <b><a
+              href="http://www.nuxeo.com/en/products/document-management">Document
+        Management</a></b> solutions to help companies better produce,
+        process, publish, archive, expose and find their information
+        from digital assets to transactional documents. </p>
+
+      <p>
+        » Follow us <a href="http://twitter.com/nuxeo">@nuxeo</a> (Twitter) </p>
+
+      <p>
+        » Connect on <a href="http://www.linkedin.com/groupRegistration?gid=43314">LinkedIn</a>
+      </p>
+
+      <p>
+        » Visit <a href="http://www.nuxeo.com/en/">Nuxeo.com</a>
+      </p>
+    </div>
+
+    <p>&nbsp;</p>
+
+    <p class="rounded">
+      <a href="http://www.nuxeo.com/en/subscription/connect/studio">
+        Customize & Configure<br/>
+        <span>Nuxeo • Studio</span>
+      </a>
+    </p>
+
+    <p class="rounded">
+      <a href="http://www.nuxeo.com/en/downloads/cloud-trial">
+        <span>Nuxeo • DM</span><br/>
+        Online Trial
+      </a>
+    </p>
+
+    <p class="rounded">
+      <a href="http://www.nuxeo.com/en/downloads/download-dm-form">
+        <span>Nuxeo • DM</span><br/>
+        Download
+      </a>
+    </p>
+
+    <p class="rounded">
+      <a href="http://www.nuxeo.com/en/downloads/download-dam-form">
+        <span>Nuxeo • DAM</span><br/>
+        Download
+      </a>
+    </p>
+
+    <p style="text-align:center;"><a href="http://www.nuxeo.com/en/subscription/connect">
+      <img src="http://nuxeo.typepad.com/img/connect_left_side_macaron.jpg" alt="Nuxeo Connect support" width="165"
+              height="85"/></a></p>
+
+  </div>
+</div>
+
+</div>
+<!--/pagebody-inner-->
+</div>
+<!--/pagebody-->
+</div>
+<!--/container-inner-->
+</div>
+<!--/container-->
+
+<div style="clear:both;"></div>
+
+<div class="foot">
+  <div class="FooterContainer">
+    <div class="FootLinks">
+      <ul>
+        <li><h6>More</h6>
+          <ul>
+            <li><a href="http://doc.nuxeo.com/">documentation</a>
+            </li>
+            <li><a href="http://blogs.nuxeo.com/">blogs</a>
+            </li>
+            <li>
+              <a href="http://www.nuxeo.com/en/resources/videos-on-demand">videos</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><h6>About Nuxeo</h6>
+          <ul>
+            <li><a href="http://www.nuxeo.com/">nuxeo.com</a>
+            </li>
+            <li><a href="http://www.nuxeo.org/">community</a>
+            </li>
+            <li><a href="http://www.nuxeo.com/en/about/careers">jobs</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><h6>Our products</h6>
+          <ul>
+            <li><a href="http://www.nuxeo.com/en/products/document-management">Document Management (DM)</a></li>
+            <li><a href="http://www.nuxeo.com/en/products/dam">Digital Asset Management (DAM)</a></li>
+            <li><a href="http://www.nuxeo.com/en/products/case-management">Case Management Framework (CMF)</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><h6>Our services</h6>
+          <ul>
+            <li><a href="http://www.nuxeo.com/en/subscription/connect">support</a></li>
+            <!-- was: nuxeo <span class="connect">•</span> Connect -->
+            <li><a href="http://www.nuxeo.com/en/services/training">training</a></li>
+            <li><a href="http://www.nuxeo.com/en/services/consulting">consulting</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><h6>Follow us</h6>
+          <ul>
+            <li><a rel="nofollow" href="http://twitter.com/nuxeo"
+                    onclick="_gaq.push(['_trackEvent', 'Social', 'Twitter', 'Go to Twitter page'])"><span
+                    class="twitter">twitter</span> /nuxeo</a></li>
+            <li>
+              <a rel="nofollow"
+                      href="http://www.linkedin.com/groupsDirectory?itemaction=mclk&amp;anetid=43314&amp;impid=&amp;pgkey=anet_search_results&amp;actpref=anetsrch_name&amp;trk=anetsrch_name&amp;goback=%2Egdr_1288215250735_1"
+                      onclick="_gaq.push(['_trackEvent', 'Social', 'LinkedIn', 'Go to LinkedIn group page'])"><span
+                      class="linkedIn">linkedIn</span> /Nuxeo
+                Community</a></li>
+            <li>
+              <a rel="nofollow" href="http://www.facebook.com/group.php?gid=5568495138"
+                      onclick="_gaq.push(['_trackEvent', 'Social', 'FaceBook', 'Go to FaceBook group page'])"><span
+                      class="facebook">facebook</span> /Nuxeo
+                Users</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="Contact">
+      ©2010-2011 <span class="nuxeoLogo">nuxeo</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <small>Free icons from
+        <a rel="nofollow"
+                href="http://www.wpzoom.com/wpzoom/500-free-icons-wpzoom-social-networking-icon-set/">WPZoom</a>
+        and <a rel="nofollow" href="http://www.famfamfam.com/">FamFamFam</a>
+      </small>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script>
+<script>mktoMunchkin("498-JDO-611");</script>
+
+</html>
