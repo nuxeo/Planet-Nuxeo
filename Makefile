@@ -33,5 +33,5 @@ install:
 
 
 push:
-	rsync -avz -e ssh ring Makefile *.txt ring.sh ring.cfg .git \
-		gtll@oss4cloud.org:/var/www/gtll-2.0/
+	rsync -avz -e ssh ring Makefile *.txt ring.sh ring.cfg \
+		blogs@styx.nuxeo.com:engine

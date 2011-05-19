@@ -5,7 +5,7 @@
   </div>
 
   <div class="fromblog">
-    <a href="{{ post.feed.url }}" class="whosblog">{{ post.feed.title }}</a>
+    <a href="{{ post.feed.home }}" class="whosblog">{{ post.feed.title }}</a>
   </div>
 
   {% set image_url = post.image_url %}
@@ -35,8 +35,8 @@
   <ul>
     {% for post in posts %}
     <li><span>{{ post.published_datetime.strftime("%a %d %B %Y") }}:</span>
-      <a href="postlinkg">{{ post.title }}</a> from
-      <a href="{{ post.feed.url }}" class="whosblog">{{ post.feed.title }}</a></li>
+      <a href="{{ post.link }}">{{ post.title }}</a> from
+      <a href="{{ post.feed.home }}" class="whosblog">{{ post.feed.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
