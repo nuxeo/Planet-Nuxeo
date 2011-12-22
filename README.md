@@ -19,7 +19,7 @@ To run the app, you need:
 - At least libxml2-dev and libxslt1-dev (Debian package names)
 - pip and virtualenv (use `easy_install pip` if needed)
 - Type "make" to fetch and compile dependencies
-- Activate the 
+- Activate the environment (". env/bin/activate")
 - Type "make crawl" then "make run" and point your browser to the URL
   given
 
